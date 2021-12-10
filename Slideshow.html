@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+</head>
+<body>
+    <div>
+    <h3 style="font-family: monospace; " >This is a slideshow</h3>
+    <img id="imageDisplay" src = "pic1.jpg" style="width: 300; height: 300px;" alt = "anime">
+    </div>
+    <script>
+        window.addEventListener("load", function()
+        {
+
+
+            var imageList = ["pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg"];
+            var imageDisplay = document.querySelector("#imageDisplay");
+            setTimeout(function(){
+
+                imageDisplay.src = 'pic2.jpg';
+            },3000);
+
+            let currentImageIndex = 0;
+            function nextImage()
+            {
+                currentImageIndex++;
+                if (currentImageIndex == imageList.length)
+                {
+                    currentImageIndex = 0;
+                }
+                return imageList[currentImageIndex];
+            }
+
+            setInterval(function() 
+             { 
+                 console.log(currentImageIndex);
+                 console.log(nextImage());
+                 imageDisplay.src = nextImage();
+                
+            }, 2000);
+
+        });
+    </script>
+</body>
+</html>

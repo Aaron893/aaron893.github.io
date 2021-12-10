@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function next()
+        {
+          
+            document.getElementById("image").height= "300";
+            document.getElementById("image").src= "pic5.jpg";
+        }
+
+
+        function previous()
+        {
+            document.getElementById("image").height= "300";
+            document.getElementById("image").src= "pic4.jpg";
+        }
+    </script>
+</head>
+<body>
+    
+    <button value="previous" onclick = "previous();"> Previous </button>
+    <img id="image" src="pic4.jpg" width="200" height="300" alt="Itachi">
+    <button value="Next" onclick="next();"> Next </button>
+    <p style="font-size: 20px;">Click to see the next character!</p>
+</body>
+</html>
