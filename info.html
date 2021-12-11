@@ -5,139 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaroon John Bivera</title>
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="info.css" type="text/css">
+    <script src="info.js"></script>
 </head>
 <body>
-    <header>
-        <nav id="main-menu">
-        
-            <ul class="nav-bar">
-                 <li ><a href="honesty.html">HONESTY</a></li>
-                 <li ><a href="info.html" class="active">INFO</a></li>
-                 <li><a href="reflection.html">REFLECTION</a></li>
-            </ul>
-       </nav>
-    </header>
-
-   
+  <header>
+    <nav id="main-menu">
+    
+        <ul class="nav-bar">
+             <li ><a href="honesty.html">HONESTY</a></li>
+             <li ><a href="info.html " class="active">INFO</a></li>
+             <li><a href="reflection.html">REFLECTION</a></li>
+        </ul>
+   </nav>
+</header>
     <main>
-        <div class="sideInfo">
-            <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">AAROON JOHN BIVERA</h2>
-            <br>
-            <a>ajohn-bivera@myseneca.ca</a>            
-        </div>
-        <div class="mainInfo">
-            <h1>Contact Us</h1>
-            <h4>All fields are required!!</h4>
-            <form
-              name="formFeedback"
-              action="https://httpbin.org/post"
-              onsubmit="return validateForm();"
-              method="post"
-            >
-              <input
-                type="hidden"
-                name="fullName"
-                value="xxxxxxxxxxxxxxxxxxxxxxxxxx"
-              />
-              <input
-                type="hidden"
-                name="studentNumber"
-                value="xxxxxxxxxxxxxxxxxxxxxxxxxx"
-              />
-              <label>User Name</label>
-              <br />
-              <input
-                type="text"
-                placeholder="Enter your username"
-                name="userName"
-                required="required"
-              />
-              <p id="userVal"></p>
-              <br />
-              <p>Select your gender</p>
-              <input type="radio" name="gender" value="male" required="required" />
-              <label>Male</label>
-              <input
-                type="radio"
-                name="gender"
-                value="female"
-                required="required"
-              />
-              <label>Female</label>
-              <input type="radio" name="gender" value="nosay" required="required" />
-              <label>Prefer Not to say</label>
-              <br />
-              <br />
-              <label>Age </label>
-              <br />
-              <input
-                type="number"
-                name="age"
-                placeholder="Enter your age"
-                required="required"
-              />
-              <p id="ageVal"></p>
-              <br />
-              <br />
-              <label>Province</label>
-              <br />
-    
-              <select name="province" id="province">
-                <option value="AB">Alberta</option>
-                <option value="BC">British Columbia</option>
-                <option value="MB">Manitoba</option>
-                <option value="NB">New Brunswick</option>
-                <option value="NL">Newfoundland and Labrador</option>
-                <option value="NS">Nova Scotia</option>
-                <option value="NT">Northwest Territories</option>
-                <option value="NU">Nunavut</option>
-                <option value="ON" selected="selected">Ontario</option>
-                <option value="PE">Prince Edward Island</option>
-                <option value="QC">Quebec</option>
-                <option value="SK">Saskatchewan</option>
-                <option value="YT">Yukon</option>
-              </select>
-    
-              <br /><br />
-              <label>Phone Number</label>
-              <br />
-              <input
-                type="tel"
-                name="telephoneNo"
-                required="required"
-                placeholder="(XXX)XXX-XXXX"
-              />
-              <br />
-              <p id="phoneVal"></p>
-              <br />
-              <label>Email</label>
-              <br />
-              <input
-                type="email"
-                name="email"
-                required="required"
-                placeholder="Enter email address"
-              />
-              <br /><br />
-              <label>Comment</label>
-              <br />
-              <textarea id="comments" name="comments" required="required">
-              </textarea>
-              <p id="textVal"></p>
-              <input type="submit" name="submit" />
-              <input type="reset" name="reset" />
-            </form>
-          </div>
-
-    </main>
-    <footer>
         
-            &copy; MADE BY AAROON JOHN BIVERA
-    </footer>
+        <div id="formContainer">
+            <h1>Sign Up</h1>
+            <form
+            name="signup"
+            action="https://httpbin.org/post"
+            onsubmit="return validateForm();"
+            method="post"
+          >
+          <br>
+          <br>
+          <label>First Name</label>
+          <br />
+          <input
+            type="text"
+            placeholder="Enter your First Name"
+            name="firstName"
+            required="required"
+          />
+          <br>
+          <label>Last Name</label>
+          <br />
+          
+          <input
+            type="text"
+            placeholder="Enter your Last Name"
+            name="lastNamed"
+            required="required"
+          />
+            <br>
+          <label>Password</label>
+            <br>
+          <input type="password" name="passwordFirst" placeholder="Enter password" autocomplete="off"  minlength="6" required>
+          <br>
+          <label >Re-enter Password</label><br>
+          <input type="password" name="passwordSecond" placeholder="Confirm password" autocomplete="off" minlength="6"  required>
+          <br>
+          <label >User Name</label><br>
+          <input  type="text" name="userName" placeholder="Enter a username" required>
+          <br>
+          <label >E-mail</label><br>
+          <input id="Email" type="email" name="email" placeholder="Enter an email" required>
+          <br>
+          <p>Education Status</p>
+              <label><input type="radio" name="studyStat" value="GRADUATED" required default/>Graduated</label><br />
+              <label><input type="radio" name="studyStat" value="ENROLLED" />Current Enrolled</label><br />      
+              <label><input type="radio" name="studyStat" value="DID NOT GRADUATE" />Did not graduate</label><br />
+              <br>   
+          <label >Age</label><br>
+          <input id="age" type="number" name="age" placeholder="between 18-60" required min="18" max="60">
+          <input type="hidden" name="lastName" id="lastName" value="John Bivera" />
+          <input type="hidden" name="studentId" id="studentId" value="156486201" />
+          <br>
+          <input type="submit" name="submit" onclick="return validateForm()"/>
+          <input type="reset" name="reset" />
+          </form>
+        </div>
+        <div>
+            <p id="NameVal" class="errors"></p>
+            <p id="passwordMatch"class="errors"></p>
+            <p id="userNameVal" class="errors"></p>
+            <p id="ageVal" class="errors"></p>
+        </div>
+    </main>
+    <br>
+    <br>
+    <footer>
+      &copy AAROON JOHN BIVERA
+      <br>
+      <br>
    
-
-   
+  </footer>
     
 </body>
 </html>
