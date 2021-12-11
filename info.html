@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaroon John Bivera</title>
+    <link rel="stylesheet" href="normalize.css">
+</head>
+<body>
+    <header>
+        <nav id="main-menu">
+        
+            <ul class="nav-bar">
+                 <li ><a href="honesty.html">HONESTY</a></li>
+                 <li ><a href="info.html" class="active">INFO</a></li>
+                 <li><a href="reflection.html">REFLECTION</a></li>
+            </ul>
+       </nav>
+    </header>
+
+   
+    <main>
+        <div class="sideInfo">
+            <h2 style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 25px;">AAROON JOHN BIVERA</h2>
+            <br>
+            <a>ajohn-bivera@myseneca.ca</a>            
+        </div>
+        <div class="mainInfo">
+            <h1>Contact Us</h1>
+            <h4>All fields are required!!</h4>
+            <form
+              name="formFeedback"
+              action="https://httpbin.org/post"
+              onsubmit="return validateForm();"
+              method="post"
+            >
+              <input
+                type="hidden"
+                name="fullName"
+                value="xxxxxxxxxxxxxxxxxxxxxxxxxx"
+              />
+              <input
+                type="hidden"
+                name="studentNumber"
+                value="xxxxxxxxxxxxxxxxxxxxxxxxxx"
+              />
+              <label>User Name</label>
+              <br />
+              <input
+                type="text"
+                placeholder="Enter your username"
+                name="userName"
+                required="required"
+              />
+              <p id="userVal"></p>
+              <br />
+              <p>Select your gender</p>
+              <input type="radio" name="gender" value="male" required="required" />
+              <label>Male</label>
+              <input
+                type="radio"
+                name="gender"
+                value="female"
+                required="required"
+              />
+              <label>Female</label>
+              <input type="radio" name="gender" value="nosay" required="required" />
+              <label>Prefer Not to say</label>
+              <br />
+              <br />
+              <label>Age </label>
+              <br />
+              <input
+                type="number"
+                name="age"
+                placeholder="Enter your age"
+                required="required"
+              />
+              <p id="ageVal"></p>
+              <br />
+              <br />
+              <label>Province</label>
+              <br />
+    
+              <select name="province" id="province">
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">New Brunswick</option>
+                <option value="NL">Newfoundland and Labrador</option>
+                <option value="NS">Nova Scotia</option>
+                <option value="NT">Northwest Territories</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON" selected="selected">Ontario</option>
+                <option value="PE">Prince Edward Island</option>
+                <option value="QC">Quebec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="YT">Yukon</option>
+              </select>
+    
+              <br /><br />
+              <label>Phone Number</label>
+              <br />
+              <input
+                type="tel"
+                name="telephoneNo"
+                required="required"
+                placeholder="(XXX)XXX-XXXX"
+              />
+              <br />
+              <p id="phoneVal"></p>
+              <br />
+              <label>Email</label>
+              <br />
+              <input
+                type="email"
+                name="email"
+                required="required"
+                placeholder="Enter email address"
+              />
+              <br /><br />
+              <label>Comment</label>
+              <br />
+              <textarea id="comments" name="comments" required="required">
+              </textarea>
+              <p id="textVal"></p>
+              <input type="submit" name="submit" />
+              <input type="reset" name="reset" />
+            </form>
+          </div>
+
+    </main>
+    <footer>
+        
+            &copy; MADE BY AAROON JOHN BIVERA
+    </footer>
+   
+
+   
+    
+</body>
+</html>
